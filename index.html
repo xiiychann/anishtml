@@ -1,0 +1,145 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Main Page</title>
+        <link rel="icon" type="image/png" href="logo.png">
+<style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            background-color: #FFE3E3;
+            background-image: url('bg1.png');
+            background-size: cover; /* Ensures the image covers the entire screen 
+            background-position: center; /* Centers the image */
+            background-repeat: no-repeat; /* Prevents tiling */
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #2F3645;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+        .sidebar .logo {
+            margin-top: 10px;
+            padding: 10px;
+            width: 250px; 
+            height: 190px; 
+            display: inline-block; 
+        }
+        .sidebar .menu a {
+            display: block;
+            padding: 15px 20px;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+        }
+        .sidebar .menu a:hover {
+            background-color: #FFE3E3;
+	    color: black;
+	}
+	.sidebar .footer {
+	    color: white;
+            text-align: center;
+            text-decoration: none;
+        }
+        .footer {
+            font-size:10px;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        .footer p {
+            margin-bottom: 5px;
+        }
+
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+        .anis-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .intro-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 150px;
+        }
+
+        .hello {
+            font-size: 40px;
+            color: #432E54;
+            margin-bottom: 20px;
+        }
+        .name {
+            font-size: 50px;
+            font-weight: bold;
+            color: #AE445A;
+            margin-bottom: 10px;
+        }
+        .profession {
+            font-size: 22px;
+            color: #432E54;
+            margin-bottom: 30px;
+        }
+       .profile-img {
+            object-fit: cover;
+            margin-left: 50px;
+            width: 1000px; 
+            height: 350px;
+        }
+</style>
+</head>
+<body bgcolor="#FFE3E3">
+
+<div class="sidebar">
+    <div class="logo">
+    <center><img src="anis.jpg" width="190px" height="190px" alt="Anis"  style="width: 80%; border-radius: 10px;"></center>
+  </div>
+        <div class="menu">
+            <a href="index.html">HOME</a>
+            <a href="biodata.html">BIODATA</a>
+            <a href="ex.html">EXPERIENCE</a>
+            <a href="edu.html">EDUCATION</a>
+            <a href="family.html">FAMILY</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="contact.html">CONTACT</a>
+        </div>
+
+	<div class="footer">
+	   <p>© Copyright 2024 | Website developed by xiiychan</p>
+	</div>
+        </div>
+    </div>
+
+<div class="content">
+    <div class="anis-section">
+        <div class="intro-text">
+            <div class="hello"><marquee><i>HELLO!</i></marquee></div>
+            <div class="name"><sup>I'm</sup> Anis Nafisa Mohd Umfadeesah</div>
+            <div class="profession">Student <u>Diploma in Information Management</u> Semester 5</div>
+            </div>
+        </div>
+
+        <div>
+            <img src="aa.jpg" alt="Anis" class="profile-img" />
+        </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
