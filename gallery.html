@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="icon" type="image/png" href="logo.png">
+
+<style>
+ body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            background-color: #FFE3E3;
+            background-image: url('bg6.png');
+            background-size: cover; /* Ensures the image covers the entire screen 
+            background-position: center; /* Centers the image */
+            background-repeat: no-repeat; /* Prevents tiling */
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #2F3645;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar .logo {
+            margin-top: 10px;
+            padding: 10px;
+            width: 250px; 
+            height: 190px; 
+            display: inline-block;
+        }
+
+        .sidebar .menu a {
+            display: block;
+            padding: 15px 20px;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .sidebar .menu a:hover {
+            background-color: #FFE3E3;
+            color: black;
+        }
+
+        .sidebar .footer {
+            color: white;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .footer {
+            font-size:10px;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        .footer p {
+            margin-bottom: 5px;
+        }
+        .article {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .article h2 {
+            font-size: 50px;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            margin-left: -10px;
+	}
+        .content {
+            margin-left: 300px; /* Matches the sidebar width */
+            padding: 20px;
+            flex: 1;
+        }
+
+
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3,2fr); /* Adjust number of columns */
+    gap: 20px;
+}
+
+.card {
+    width: 300px;
+    height: 350px;
+    perspective: 1000px; /* Adds 3D effect */
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: transform 0.6s ease-in-out;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg); /* Flip on hover */
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden; /* Hides the back when front is visible */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+}
+
+.card-front {
+    background: #fff;
+    overflow: hidden;
+    padding: 0;
+    border: 1px solid #ddd;
+}
+
+.card-front img {
+    width: 100%;
+    height: 90%; /* Image takes up most of the card */
+    object-fit: cover;
+}
+
+.card-front h2 {
+    margin: 10px 0 0;
+    color: #333;
+    padding-botttom: 10px;
+}
+
+.card-back {
+    background: #555; /* Back background color */
+    padding: 20px;
+    transform: rotateY(180deg);
+    border-radius: 10px;
+    width: 80%;
+    height: 80%;
+}
+</style>
+</head>
+<body>
+<div class="sidebar">
+    <div class="logo">
+        <center><img src="anis.jpg" width="190px" height="190px" alt="Anis" style="width: 80%; border-radius: 10px;"></center>
+    </div>
+    <div class="menu">
+        <a href="index.html">HOME</a>
+        <a href="biodata.html">BIODATA</a>
+        <a href="ex.html">EXPERIENCE</a>
+        <a href="edu.html">EDUCATION</a>
+        <a href="family.html">FAMILY</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="contact.html">CONTACT</a>
+    </div>
+    <div class="footer">
+        <p>© Copyright 2024 | Website developed by xiiychan</p>
+    </div>
+</div>
+
+<div class="content">
+    <div class="article">
+    
+    <h2 style="text-align: center;">Gallery</h2>
+    <audio controls autoplay loop>
+      <source src="rahsiatuhan.mp3" type="audio/mpeg">
+    </audio>
+	</div><br><br>
+
+    <div class="card-container">
+        <!-- Card 1 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="mimi.jpg" alt="Mimi">
+                    <h2>Mimi</h2>
+                </div>
+                <div class="card-back">
+                    <p>"In the story of us, every chapter is my favorite."</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="pahtris.jpg" alt="pahtris">
+                    <h2>Pah & Tris</h2>
+                </div>
+                <div class="card-back">
+                    <p>"Being pretty is a gift; being smart is our superpower."</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="trio.jpg" alt="trio">
+                    <h2>Io</h2>
+                </div>
+                <div class="card-back">
+                    <p>"We don’t follow the rules; we rewrite them."</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="meow1.jpg" alt="bolat">
+                    <h2>Bolat</h2>
+                </div>
+                <div class="card-back">
+                    <p>"Terlalu shomel untuk dijadikan meme."</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="meow2.jpg" alt="boyen">
+                    <h2>Boyen</h2>
+                </div>
+                <div class="card-back">
+                    <p>"Boyen terlebih catnip."</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="meow3.jpg" alt="majikan">
+                    <h2>Boss</h2>
+                </div>
+                <div class="card-back">
+                    <p>"Silau bro."</p>
+                </div>
+            </div>
+        </div>
+
+       <!-- Card 7 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="idaro.jpg" alt="colorun">
+                    <h2>Uni's Life Surviver</h2>
+                </div>
+                <div class="card-back">
+                    <p>"Meow."</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="farah.jpg" alt="raya">
+                    <h2>Medanian</h2>
+                </div>
+                <div class="card-back">
+                    <p>"My time capsule—preserving the best moments of youth and laughter."</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="gepuk.jpg" alt="yinfea">
+                    <h2>Yin & Fea</h2>
+                </div>
+                <div class="card-back">
+                    <p>"Ayam gepuk for lifee broskii."</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
