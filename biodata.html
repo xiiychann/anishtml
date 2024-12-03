@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biodata</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <style>
+    /* General Body Styling */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      background-color: #FFE3E3;
+      background-image: url('bg2.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #2F3645;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      color: white;
+      display: flex;
+      flex-direction: column;
+    }
+    .sidebar .logo {
+      margin-top: 10px;
+      padding: 10px;
+      width: 250px; 
+      height: 190px; 
+      display: inline-block; 
+    }
+    .sidebar .menu a {
+      display: block;
+      padding: 15px 20px;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+    }
+    .sidebar .menu a:hover {
+      background-color: #FFE3E3;
+      color: black;
+    }
+    .sidebar .footer {
+      color: white;
+      text-align: center;
+      text-decoration: none;
+    }
+    .footer {
+      font-size: 10px;
+      padding: 10px;
+      text-align: center;
+      color: white;
+    }
+
+    .footer p {
+      margin-bottom: 5px;
+      margin-left: 0px;
+    }
+
+    .article {
+      margin-top: 10px;
+    }
+    .article h2 {
+      font-size: 50px;
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: -50px;
+      text-align: center;
+      margin-left: 150px;
+    }
+
+    /* Full Page Container */
+    .container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      margin-left: 250px;
+      margin-top: 30px;
+    }
+
+    /* Image Section */
+    .image-container {
+      flex: 1;
+      max-width: 300px;
+      text-align: center;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Biodata Section */
+    .biodata {
+      flex: 2;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .biodata h2 {
+      font-size: 2.5rem;
+      color: #AE445A;
+      margin-bottom: 10px;
+      margin-right: 100px;
+    }
+
+    .biodata p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    .biodata ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .biodata ul li {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      margin-left: 50px;
+    }
+
+    .biodata ul li span {
+      font-weight: bold;
+      color: #AE445A;
+    }
+
+    .biodata ul li::marker {
+      content: "✰⋆⁺";
+      color: #AE445A;
+    }
+
+    /* Skills Section */
+    .skills-container {
+      background-color: #fff;
+      margin-top: 20px;
+      margin-left: 320px;
+      margin-right: 90px;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .skills-container h2 {
+      text-align: center;
+      color: #AE445A;
+      margin-bottom: 20px;
+      margin-right: 180px;
+    }
+
+    .skill {
+      margin-bottom: 15px;
+    }
+
+    .skill p {
+      margin: 0 0 5px;
+    }
+
+    .skill-bar {
+      width: 100%;
+      background-color: #ddd;
+      height: 25px;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .skill-bar div {
+      height: 100%;
+      text-align: center;
+      line-height: 25px;
+      color: white;
+      border-radius: 5px;
+    }
+
+    .Canva {
+      width: 90%;
+      background-color: #04AA6D;
+    }
+
+    .HTML {
+      width: 70%;
+      background-color: #2196F3;
+    }
+
+    .CSS {
+      width: 50%;
+      background-color: #f44336;
+    }
+
+    .PHP {
+      width: 60%;
+      background-color: #808080;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .image-container {
+        max-width: 200px;
+      }
+
+      .biodata {
+        width: 90%;
+        margin: 0 auto;
+      }
+      .skills-container {
+        width: 90%;
+        margin: 20px auto;
+      }
+
+    table th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin-left: 330px;
+      border-collapse: collapse;
+      position: relative;
+      z-index: 1; 
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f4f4f4;
+      font-weight: bold;
+    }
+
+    ul, ol {
+      padding-left: 20px; /* Adds space between bullet/number and text */
+    }
+
+    ul li, ol li {
+      margin-bottom: 5px;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="logo">
+    <center><img src="anis.jpg" width="190px" height="190px" alt="Anis" style="width: 80%; border-radius: 10px;"></center>
+  </div>
+  <div class="menu">
+    <a href="index.html">HOME</a>
+    <a href="biodata.html">BIODATA</a>
+    <a href="ex.html">EXPERIENCE</a>
+    <a href="edu.html">EDUCATION</a>
+    <a href="family.html">FAMILY</a>
+    <a href="gallery.html">GALLERY</a>
+    <a href="contact.html">CONTACT</a>
+  </div>
+  <div class="footer">
+    <p>© Copyright 2024 | Website developed by xiiychan</p>
+  </div>
+</div>
+
+<div class="article">
+
+                     <h2 style="margin-bottom:10px; margin-left: 320px;">Biodata</h2>
+	<marquee><p style="font-size: 20px;  margin-bottom: 0px;">"Be yourself; everyone else is already taken." – <sub> Oscar Wilde</sub></p></marquee>
+  <div>
+
+    <div class="container">
+      <!-- Image Section -->
+      <div class="image-container">
+        <img src="nafisa.jpg" alt="Profile Picture">
+      </div>
+
+      <!-- Biodata Section -->
+      <div class="biodata">
+        <center><h2>About Me</h2></center>
+        <p>"With a name that means 'a loyal friend who is very precious,' I strive to embody trust, kindness, and a lasting presence in the lives of those I hold dear."</p>
+        <ul>
+          <li><span>Name:</span> Anis Nafisa binti Mohd Umfadeesah</li>
+          <li><span>Age:</span> 20 years</li>
+          <li><span>Address:</span> Sri Medan Batu Pahat, Johor</li>
+          <li><span>Date of Birth:</span> 11 Sept 2004</li>
+          <li><span>Gender:</span> Female</li>
+          <li><span>Height:</span> 4 feet 9 inches</li>
+          <li><span>Personality Type:</span> <b>ENFP Campaigners</b> are enthusiastic, creative, and sociable free spirits, who can always find a reason to smile.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="skills-container">
+      <h2>Skills</h2>
+      <div class="skill">
+        <p>Canva</p>
+        <div class="skill-bar">
+          <div class="Canva">90%</div>
+        </div>
+      </div>
+      <div class="skill">
+        <p>HTML</p>
+        <div class="skill-bar">
+          <div class="HTML">70%</div>
+        </div>
+      </div>
+      <div class="skill">
+        <p>CSS</p>
+        <div class="skill-bar">
+          <div class="CSS">50%</div>
+        </div>
+      </div>
+      <div class="skill">
+        <p>PHP</p>
+        <div class="skill-bar">
+          <div class="PHP">60%</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Table Section -->
+    <div style="margin-top: 50px; border-collapse: collapse;">
+      <table style="width:70%; margin-left: 330px; margin-top: 30px; text-align:center; item-align: center; border-collapse: collapse; position: relative; z-index: 1;">
+        <tr>
+          <th style="font-size: 20px; color: #AE445A;">Favourite Food</th>
+          <th style="font-size: 20px; color: #AE445A;">Hobbies</th>
+	  <th style="font-size: 20px; color: #AE445A;">Favourite Beverages</th>
+        </tr>
+        <tr>
+          <td>
+            <ol>
+              <li>Ayam Gunting</li>
+              <li>Keropok Lekor</li>
+              <li>Nasi Ayam Gepuk</li>
+            </ol>
+          </td>
+          <td>
+            <ul>
+              <li>Watching Kdrama and Anime</li>
+              <li>Listening to music</li>
+              <li>Reading</li>
+            </ul>
+          </td>
+          <td>
+            <ol>
+              <li>Chagee Da Hong Pao Milk Tea</li>
+              <li>Gigi Coffee Buttercream Latte</li>
+              <li>Zuss Matcha Latte</li>
+            </ol>
+          </td>
+        </tr>
+      </table>
+    </div>
+</div>
+
+<h2 style="margin-top: 40px; margin-bottom: 5px; color:">Food</h2>
+<p style="margin-left: 550px;"><u>"The only thing I like better than talking about food is eating."</u></p>
+        <img src="food.png" alt="Foods" style="margin-left: 400px; margin-bottom: 0px;">
+
+<h2 style="margin-top: 80px; margin-bottom: 5px; color:">Hobbies</h2>
+<center><p style="margin-left: 280px;"><u>"In the quiet moments of watching Kdrama and Anime, the rhythm of my favorite music, and the pages of a good book, I find joy and inspiration."</u></p></center>
+        <img src="hobbies.png" alt="Hobbies" style="margin-left: 400px; margin-bottom: 0px;"><br>
+
+<h2 style="margin-top: 80px; margin-bottom: 5px; color:">Beverages</h2>
+<center><p style="margin-left: 290px;"><u>"Buttercream Latte to awaken the soul, Matcha Latte to soothe the heart, and Da Hong Pao Milk Tea to spark the imagination."</u></p></center>
+        <img src="beverages.png" alt="Beverages" style="margin-left: 400px; margin-bottom: 20px;"><br>
+
+
+  </div>
+</div>
+    
+</body>
+</html>

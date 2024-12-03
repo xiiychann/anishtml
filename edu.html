@@ -1,0 +1,247 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education</title>
+  <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            background-color: #FFE3E3;
+            min-height: 100vh; /* Ensure body takes up full height */
+            margin: 0;
+            background-image: url('bg4.png');
+            background-size: cover; /* Ensures the image covers the entire screen 
+            background-position: center; /* Centers the image */
+            background-repeat: no-repeat; /* Prevents tiling */
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #2F3645;
+            height: 100vh; /* Full height of the screen */
+            position: fixed;
+            top: 0;
+            left: 0;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+        .sidebar .logo {
+            margin-top: 10px;
+            padding: 10px;
+            width: 250px; 
+            height: 190px; 
+            display: inline-block;
+        }
+        .sidebar .menu a {
+            display: block;
+            padding: 15px 20px;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+        }
+        .sidebar .menu a:hover {
+            background-color: #FFE3E3;
+            color: black;
+        }
+        .sidebar .footer {
+            color: white;
+            text-align: center;
+            margin-top: auto;
+        }
+        .footer {
+            font-size:10px;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        .footer p {
+            margin-bottom: 5px;
+        }
+        .content {
+            margin-left: 250px; /* Sidebar width offset */
+            padding: 20px;
+            width: calc(100% - 250px); /* Remaining width of the screen */
+        }
+        .article {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .article h2 {
+            font-size: 50px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            background-color: #fff;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #2F3645;
+            color: white;
+            text-align: center;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+    .card-container {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+      margin-left: 50px;
+    }
+
+    .card {
+      flex: 1;
+      max-width: 300px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .card-content {
+      padding: 20px;
+
+    }
+
+    .card-title {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin: 0 0 10px;
+    }
+
+    .card-description {
+      font-size: 1em;
+      color: #666;
+      margin: 0;
+      text-align: justify;
+    }
+  </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <div class="logo">
+        <center><img src="anis.jpg" width="190px" height="190px" alt="Anis" style="width: 80%; border-radius: 10px;"></center>
+    </div>
+    <div class="menu">
+        <a href="index.html">HOME</a>
+        <a href="biodata.html">BIODATA</a>
+        <a href="ex.html">EXPERIENCE</a>
+        <a href="edu.html">EDUCATION</a>
+        <a href="family.html">FAMILY</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="contact.html">CONTACT</a>
+    </div>
+    <div class="footer">
+        <p>© Copyright 2024 | Website developed by xiiychan</p>
+    </div>
+</div>
+
+<div class="content">
+    <div class="article">
+    
+        <h2 style="text-align: center;">Academic Qualifications</h2>
+	<marquee><p style="font-size: 20px;  margin-bottom: 0px;">"Education is the most powerful weapon which you can use to change the world." – <sub> Nelson Mandela</sub></p></marquee>
+
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>EDUCATION</th>
+                <th>INSTITUTION</th>
+                <th>YEAR</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="uitm.jpg"width="200px" height="200px" style="vertical-align: middle; margin-right: 10px;"></td>
+                <td>Diploma in Information Management</td>
+                <td>UiTM Johor, Campus Segamat</td>
+                <td>2022 - Current</td>
+            </tr>
+            <tr>
+                <td rowspan="2"><img src="smksm.jpg"width="200px" height="200px" style="vertical-align: middle; margin-right: 10px;"></td>
+                <td>Sijil Pelajaran Malaysia (SPM)</td>
+                <td>Sekolah Menengah Kebangsaan Seri Medan</td>
+                <td>2021</td>
+            </tr>
+            <tr>
+                <td>Pentaksiran Tingkatan 3 (PT3)</td>
+                <td>Sekolah Menengah Kebangsaan Seri Medan</td>
+                <td>2019</td>
+            </tr>
+            <tr>
+                <td><img src="dk.jpg"width="200px" height="200px" style="vertical-align: middle; margin-right: 10px;"></td>
+                <td>Sijil Darjah Khas Agama (SDKA)</td>
+                <td>Sekolah Agama Seri Medan</td>
+                <td>2017</td>
+            </tr>
+            <tr>
+            <tr>
+                <td><img src="sksm.jpg"width="200px" height="200px" style="vertical-align: middle; margin-right: 10px;"></td>
+                <td>Ujian Pncapaian Sekolah Rendah (UPSR)</td>
+                <td>Sekolah Rendah Seri Medan</td>
+                <td>2016</td>
+            </tr>
+            <tr>
+                <td><img src="sasm.jpg"width="200px" height="200px" style="vertical-align: middle; margin-right: 10px;"></td>
+                <td>Ujian Penilaian Kelas KAFA (UPKK)</td>
+                <td>Sekolah Agama Seri Medan</td>
+                <td>2015</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+  <div class="card-container">
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="onlineb.jpg" alt="OnlineCamping">
+      <div class="card-content">
+        <h2 class="card-title">Overall Winner for Online Camping</h2>
+        <p class="card-description">I did not expect to win 4 out of 7 contested events and become the overall winner for this online camping. it was a new experience because the movement restrictions that occurred at that time were very challenging and tiring.</p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <img src="wany.jpg" alt="Perkom">
+      <div class="card-content">
+        <h2 class="card-title">Best Student Award (ALPHA)</h2><br>
+        <p class="card-description">Hard work, pays off. despite being scolded by the commander, I survived and became the best student in the co-curricular class for the female category.</p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <img src="dean.jpg" alt="DeanList">
+      <div class="card-content">
+        <h2 class="card-title">Dean's Award</h2><br>
+        <p class="card-description"> I believe the effort will not betray the results. Even though I almost failed to stay with the existing pointers, Alhamdulillah thanks to the prayers of my mother and father, I was able to give them a dean's list award to repay their services.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
